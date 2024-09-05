@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    root: ERROR
+    com.todo: INFO  # Set the package or class-level logging as needed
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30
+    appender:
+      rollingfile:
+        name: ASYNC_FILE
+        file: ./logs/app.log
+        pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
+        rollingpolicy:
+          max-file-size: 10MB
+          max-history: 30
+        encoder:
+          pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
