@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git url 'https://github.com/anshulkatta/todo-app.git', branch: main
+                git url 'https://github.com/anshulkatta/todo-app.git'
             }
         }
 
