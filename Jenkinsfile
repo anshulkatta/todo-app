@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git branch: 'main', credentialsId: 'ccd27842-0f66-400c-bba3-2ae44964525e', url: 'https://github.com/anshulkatta/todo-app.git'
+                git branch: 'master', credentialsId: 'ccd27842-0f66-400c-bba3-2ae44964525e', url: 'https://github.com/anshulkatta/todo-app.git'
             }
         }
 
